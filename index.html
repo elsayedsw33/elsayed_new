@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Need a Wife – The Official Portfolio of Elsayed</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        /* --- CSS VARIABLES & RESET --- */
+        :root {
+            --primary: #2c3e50; /* Dark Blue */
+            --accent: #f39c12;  /* Gold/Orange */
+            --whatsapp: #25D366; /* WhatsApp Green */
+            --light: #ecf0f1;
+            --white: #ffffff;
+            --dark: #1a252f;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: var(--light);
+            color: var(--primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 { font-family: 'Montserrat', sans-serif; font-weight: 700; }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        section { padding: 80px 0; }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            background: linear-gradient(135deg, var(--primary), var(--dark));
+            color: var(--white);
+            text-align: center;
+            padding: 100px 20px;
+            clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+        }
+
+        .hero-img-container {
+            width: 200px; height: 200px; margin: 0 auto 30px;
+            border-radius: 50%; overflow: hidden;
+            border: 5px solid var(--accent);
+            background-color: #ddd; position: relative;
+        }
+
+        .hero-img-container img { width: 100%; height: 100%; object-fit: cover; }
+
+        .hero h1 { font-size: 2.5rem; margin-bottom: 10px; line-height: 1.2; }
+        .hero p { font-size: 1.2rem; opacity: 0.9; font-weight: 300; }
+
+        /* --- THE NEW BIG TITLE STYLE --- */
+.mega-title {
+    font-size: 6rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #ffffff;
+    letter-spacing: 10px;
+    margin-bottom: 40px;
+    text-shadow: 3px 3px 0px rgba(0,0,0,0.3);
+    line-height: 1;
+}
+
+/* Make it smaller on phones */
+@media (max-width: 768px) {
+    .mega-title { font-size: 2.5rem; }
+}
+
+        /* --- STATS SECTION --- */
+        .stats-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px; margin-top: 20px;
+        }
+
+        .stat-card {
+            background: var(--white); padding: 30px; border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05); text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .stat-card:hover { transform: translateY(-5px); }
+        .stat-icon { font-size: 2rem; color: var(--accent); margin-bottom: 15px; }
+        .stat-title { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; color: #999; }
+        .stat-value { font-size: 1.2rem; font-weight: 700; color: var(--primary); }
+
+        /* --- WHY MARRY ME SECTION --- */
+        .bg-white { background-color: var(--white); }
+        .section-title {
+            text-align: center; margin-bottom: 50px; font-size: 2rem;
+            position: relative; display: inline-block; left: 50%; transform: translateX(-50%);
+        }
+        .section-title::after {
+            content: ''; display: block; width: 60px; height: 4px;
+            background: var(--accent); margin: 10px auto 0; border-radius: 2px;
+        }
+        .feature-list {
+            list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;
+        }
+        .feature-item {
+            display: flex; align-items: center; background: var(--light); padding: 20px; border-radius: 10px;
+        }
+        .feature-item i { color: #27ae60; font-size: 1.5rem; margin-right: 15px; }
+
+        /* --- HOPES & HOBBIES SECTION (Fixed!) --- */
+        .hobbies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .hobby-card {
+            background: var(--white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+            border-bottom: 4px solid var(--accent);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .hobby-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .hobby-img {
+            height: 150px;
+            background-color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255,255,255,0.2);
+            font-size: 4rem;
+            width: 100%;
+        }
+        
+        /* Ensure icons are orange */
+        .hobby-img i { color: var(--accent) !important; }
+
+        .hobby-content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .hobby-content h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+
+        .hobby-content p {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        /* --- REQUIREMENTS SECTION --- */
+        .requirements-list { text-align: center; max-width: 700px; margin: 0 auto; }
+        .req-item {
+            background: var(--white); margin-bottom: 15px; padding: 20px;
+            border-left: 5px solid var(--accent); border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+            font-size: 1.1rem; text-align: left; display: flex; align-items: center;
+        }
+        .req-item i { margin-right: 15px; color: var(--primary); }
+
+        /* --- CTA & CONTACT SECTION --- */
+        .cta {
+            background: var(--primary); color: var(--white); text-align: center; padding: 100px 20px 60px;
+        }
+
+        .contact-box {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            display: inline-block;
+            padding: 30px 50px;
+            border-radius: 15px;
+            backdrop-filter: blur(5px);
+            margin: 30px 0;
+        }
+
+        .btn-whatsapp {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--whatsapp);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-top: 15px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .btn-whatsapp:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(37, 211, 102, 0.4);
+            background-color: #1ebe57;
+        }
+
+        .btn-whatsapp i { margin-right: 10px; font-size: 1.4rem; }
+
+        .footnote { margin-top: 40px; font-size: 0.8rem; opacity: 0.6; }
+
+        /* Mobile Adjustment */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 1.8rem; }
+            .contact-box { padding: 20px; width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+<header class="hero">
+    <div class="container">
+        <h1 class="mega-title">I NEED A WIFE</h1>
+
+        <div class="hero-img-container">
+            <img src="IMG_2449.jpg" alt="Elsayed">
+        </div>
+        
+        <h2 style="font-size: 2rem; margin-bottom: 10px; line-height: 1.2;">
+            Hi, I’m Elsayed — Husband Material<br>
+            <span style="font-size: 0.6em; font-weight:400; color: var(--accent);">(According to My Mom)</span>
+        </h2>
+        
+        <p>Welcome to my official application for marriage. Scroll responsibly.</p>
+    </div>
+</header>
+
+    <section id="stats">
+        <div class="container">
+            <h2 class="section-title">Basic Husband Stats</h2>
+            <div class="stats-grid">
+                <div class="stat-card"><i class="fas fa-user stat-icon"></i><div class="stat-title">Name</div><div class="stat-value">Elsayed</div></div>
+                <div class="stat-card"><i class="fas fa-hourglass-half stat-icon"></i><div class="stat-title">Age</div><div class="stat-value">19</div></div>
+                <div class="stat-card"><i class="fas fa-dumbbell stat-icon"></i><div class="stat-title">Physique</div><div class="stat-value">74–75 kg <br></div></div>
+                <div class="stat-card"><i class="fas fa-map-marker-alt stat-icon"></i><div class="stat-title">Location</div><div class="stat-value">Egypt</div></div>
+                <div class="stat-card"><i class="fas fa-briefcase stat-icon"></i><div class="stat-title">Occupation</div><div class="stat-value">AI Student</div></div>
+                <div class="stat-card"><i class="fas fa-magic stat-icon"></i><div class="stat-title">Talents</div><div class="stat-value" style="font-size: 0.9rem;">Fixing tech & Heavy Lifting</div></div>
+                <div class="stat-card"><i class="fas fa-language stat-icon"></i><div class="stat-title">Languages</div><div class="stat-value">Arabic, English </div></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-white">
+        <div class="container">
+            <h2 class="section-title">Reasons TO Marry Me </h2>
+            <ul class="feature-list">
+                <li class="feature-item"><i class="fas fa-check-circle"></i><div><strong>Loyalty:</strong>"I gave You All I had " A.M </div></li>
+                <li class="feature-item"><i class="fas fa-check-circle"></i><div><strong>Chef:</strong> Can cook eggs in 4 styles.</div></li>
+                <li class="feature-item"><i class="fas fa-check-circle"></i><div><strong>IT Dept:</strong> Tech support for life.</div></li>
+                <li class="feature-item"><i class="fas fa-check-circle"></i><div><strong>Vibe:</strong> Drama-free and protective.</div></li>
+                <li class="feature-item"><i class="fas fa-check-circle"></i><div><strong>Mentality:</strong> Souls-Player.</div></li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="hopes" style="background-color: #f9f9f9;">
+        <div class="container">
+            <h2 class="section-title">Our Future Weekend Plans</h2>
+            <p style="text-align: center; margin-bottom: 30px; opacity: 0.7;">(A.K.A. My Hopes & Dreams)</p>
+            
+            <div class="hobbies-grid">
+                
+                <div class="hobby-card">
+                    <div class="hobby-img">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <div class="hobby-content">
+                        <h3>Gaming Sessions</h3>
+                        <p>Seeking a Player 2. If I'm in a ranked match, I cannot pause the game (this is a law of physics). I promise to let you win occasionally.</p>
+                    </div>
+                </div>
+
+                <div class="hobby-card">
+                    <div class="hobby-img" style="background: #34495e;">
+                        <i class="fas fa-film"></i>
+                    </div>
+                    <div class="hobby-content">
+                        <h3>Movie Marathons</h3>
+                        <p>Professional binge-watcher. My hope is to find someone who won't fall asleep 10 minutes into the movie. No spoilers allowed.</p>
+                    </div>
+                </div>
+
+                <div class="hobby-card">
+                    <div class="hobby-img">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <div class="hobby-content">
+                        <h3>Anime & Manga</h3>
+                        <p>A man of culture. I hope you enjoy reading subtitles, because Dubs are forbidden in this household. One Piece is life.</p>
+                    </div>
+                </div>
+
+                <div class="hobby-card">
+                    <div class="hobby-img" style="background: #34495e;">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <div class="hobby-content">
+                        <h3>Gym</h3>
+                        <p>Gym 5x/week . I hope you like listening to me complain about leg day. We can spot each other (literally and figuratively).</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2 class="section-title">Now Hiring: Future Wife</h2>
+            <div class="requirements-list">
+                <div class="req-item"><i class="fas fa-heart"></i><div>Woman</div></div>
+                <div class="req-item"><i class="fas fa-laugh-beam"></i><div>Can Cook </div></div>
+                <div class="req-item" style="background: #fff8e1; border-color: #f1c40f;"><i class="fas fa-star"></i><div><strong>Bonus:</strong> Likes Macarona Bashamil </div></div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="cta">
+        <div class="container">
+            <h2>Ready to seal the deal?</h2>
+            <p style="margin-bottom: 20px; font-size: 1.1rem; opacity: 0.9;">
+                Applications are processed on a first-come, first-served basis.<br>
+                (Makers of Macarona Bashamil get priority.)
+            </p>
+
+            <div class="contact-box">
+                <div style="font-size: 1.4rem; margin-bottom: 10px; font-weight: bold;">
+                    <i class="fas fa-phone-alt" style="color:var(--accent); margin-right:10px;"></i> 
+                    <span id="display-number">Loading...</span>
+                </div>
+                <div style="font-size: 0.9rem; opacity: 0.8; margin-bottom: 20px;">
+                    Available 10 AM - 10 PM (Unless I'm boxing)
+                </div>
+
+                <button onclick="openWhatsApp()" class="btn-whatsapp">
+                    <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                </button>
+            </div>
+
+            <p class="footnote">&copy; 2025 Elsayed. Only serious applicants who laugh loudly.</p>
+        </div>
+    </footer>
+
+    <script>
+        // --- CONFIGURATION ---
+        
+        // STEP 1: Your Phone Number (No Plus sign here, just digits)
+        const myPhoneNumber = "201003227257"; 
+
+        // STEP 2: Customize the message the user will send you
+        const preFilledMessage = "Hello Elsayed, I saw your husband portfolio and I am interested in the position. Are you still accepting applications?";
+
+        // --- LOGIC (This updates the screen and handles the click) ---
+        
+        // 1. Update the visual number on the screen automatically
+        document.getElementById('display-number').innerText = "+" + myPhoneNumber;
+
+        // 2. Handle WhatsApp Click
+        function openWhatsApp() {
+            const encodedMessage = encodeURIComponent(preFilledMessage);
+            const waLink = `https://wa.me/${myPhoneNumber}?text=${encodedMessage}`;
+            window.open(waLink, '_blank');
+        }
+    </script>
+
+</body>
+</html>
