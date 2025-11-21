@@ -361,7 +361,7 @@
         const myPhoneNumber = "201003227257"; 
 
         // STEP 2: Customize the message the user will send you
-        const preFilledMessage = "Hello Elsayed, I saw your husband portfolio and I am interested in the position. Are you still accepting applications?";
+        const preFilledMessage = "";
 
         // --- LOGIC (This updates the screen and handles the click) ---
         
@@ -370,7 +370,7 @@
 
         // 2. Handle WhatsApp Click
         function openWhatsApp() {
-            //const encodedMessage = encodeURIComponent(preFilledMessage);
+            const encodedMessage = encodeURIComponent(preFilledMessage);
             const waLink = `https://wa.me/${myPhoneNumber}?text=${encodedMessage}`;
             window.open(waLink, '_blank');
         }
@@ -379,3 +379,4 @@
 </body>
 
 </html>
+
