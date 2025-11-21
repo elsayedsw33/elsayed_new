@@ -370,11 +370,12 @@
 
         // 2. Handle WhatsApp Click
         function openWhatsApp() {
-            const encodedMessage = encodeURIComponent(preFilledMessage);
+            //const encodedMessage = encodeURIComponent(preFilledMessage);
             const waLink = `https://wa.me/${myPhoneNumber}?text=${encodedMessage}`;
             window.open(waLink, '_blank');
         }
     </script>
 
 </body>
+
 </html>
